@@ -1,0 +1,67 @@
+.slogan {
+  background: url("/assets/images/p.png");
+  background-position: center;
+  background-size: cover;
+  height: 530px;
+  padding-top: 150px;
+}
+@media only screen and (max-width: 600px) {
+  .slogan {
+    background: url("/assets/images/min.png");
+    background-position: center;
+    background-size: cover;
+    height: 530px;
+    padding-top: 150px;
+  }
+}
+h2 {
+  font-size: 42px;
+}
+h3 {
+  font-size: 15px;
+}
+
+h4 {
+  list-style-type: none;
+  font-size: 18px;
+}
+table,
+th,
+td {
+  border: none;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.COVID {
+  background: url("/assets/images/covid3.png");
+  background-position: center;
+  background-size: cover;
+  height: 640px;
+  padding-top: 150px;
+}
+
+.maskExperiment {
+  background: url("/assets/images/maskExperiment.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 640px;
+  padding-top: 150px;
+}
+
+.btn {
+  border-radius: 49px;
+}
+
+.health {
+  background: url("/assets/images/health.png");
+  background-position: top;
+  background-size: cover;
+  height: 640px;
+  padding-top: 150px;
+}
+
+.countrySelect {
+  background-color: rgb(31, 42, 46);
+  height: 640px;
+}

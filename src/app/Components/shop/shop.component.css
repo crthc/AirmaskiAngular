@@ -1,0 +1,81 @@
+.container {
+  max-width: 960px;
+}
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck{
+  min-width: 220px;
+}
+
+.card-text{
+  font-family: sans-serif;
+  color: #616161;
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+
+/*HOVERS CARDS*/
+.card-img-top  {
+  size: 3rem;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.card-img-top:hover{
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+}
+
+/*HOVERS GET MASK*/
+.get-mask{
+  text-decoration: none;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size: 28px;
+      letter-spacing: 4px;
+      word-spacing: 2.6px;
+      color: #488FFF;
+      font-weight: 400;
+      text-decoration: none;
+      font-style: normal;
+      font-variant: normal;
+      text-transform: uppercase;
+      transition: color .1s ease-in-out;
+    -moz-transition: color .1s ease-in-out;
+  text-decoration: none;
+}
+
+.get-mask:hover {
+  -webkit-animation: zomg 0.5s infinite;
+  animation: zomg 0.5s infinite;
+}
+
+
+@-webkit-keyframes zomg {
+  0%, 100% { color: #7ccdea; }
+  16%      { color: #0074d9; }
+  32%      { color: #2ecc40; }
+  48%      { color: #ffdc00; }
+  64%      { color: #b10dc9; }
+  80%      { color: #ff4136; }
+}
+@keyframes zomg {
+  0%, 100% { color: #7ccdea; }
+  16%      { color: #0074d9; }
+  32%      { color: #2ecc40; }
+  48%      { color: #ffdc00; }
+  64%      { color: #b10dc9; }
+  80%      { color: #ff4136; }
+}

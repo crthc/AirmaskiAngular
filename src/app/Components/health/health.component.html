@@ -1,0 +1,295 @@
+<div>
+	<div class="row">
+		<div class="col-md-12 slogan">
+			<div class="row">
+				<div class="col-md-10 col-sm-10">
+					<h2
+						class="pl-sm-5 display-4 text-dark pl-sm-5 slide-in-left-f pr-md-4 ml-lg-4"
+					>
+						THE INVISIBLE PROBLEM
+					</h2>
+				</div>
+			</div>
+			<div class="row pt-sm-2 pl-sm-5">
+				<div class="col-md-8 col-lg-6 col-sm-8 col-7">
+					<h3 class="display-4 text-dark text-justify slide-in-left-s ml-lg-4">
+						The most dangerous particles in the air are impossible to see with
+						the naked eye. That’s why a lot of people don’t know about the
+						health risks associated with bad air, because it's invisible. You
+						wouldn’t eat rotten food or drink dirty water because you can see
+						that it’s bad for you, so why settle for dirty air?
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
+	<div class="row">
+		<div class="col-md-12 COVID">
+			<div class="row">
+				<div class="col-md-10 col-sm-10 pl-5">
+					<h2
+						class="pl-sm-5 display-4 text-white pl-sm-5 slide-in-left-f pr-md-4 ml-lg-4"
+					>
+						COVID-19 LATEST NEWS
+					</h2>
+				</div>
+			</div>
+			<div class="row pt-sm-3 pl-sm-5">
+				<div class="col-10 mx-auto">
+					<table class="ml-5 pl-5">
+						<tr>
+							<h4 class="display-4 text-white slide-in-left-s pb-3">
+								WORLDWIDE SITUATION
+							</h4>
+						</tr>
+						<tr>
+							<h4 class="display-4 text-white slide-in-left-s">
+								Total Cases: {{ covid.cases }}
+							</h4>
+						</tr>
+						<tr>
+							<td>
+								<h4 class="display-4 text-white slide-in-left-s">
+									New Cases: {{ covid.todayCases }}
+								</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4 class="display-4 text-white slide-in-left-s">
+									Total Deaths: {{ covid.deaths }}
+								</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4 class="display-4 text-white slide-in-left-s">
+									New deaths: {{ covid.todayDeaths }}
+								</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4 class="display-4 text-white slide-in-left-s">
+									People recovered: {{ covid.recovered }}
+								</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4 class="display-4 text-white slide-in-left-s">
+									Active Cases: {{ covid.active }}
+								</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4 class="display-4 text-white slide-in-left-s">
+									Critical Cases: {{ covid.critical }}
+								</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4 class="display-4 text-white slide-in-left-s">
+									Cases per one million: {{ covid.casesPerOneMillion }}
+								</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4 class="display-4 text-white slide-in-left-s">
+									Deaths per one million: {{ covid.deathsPerOneMillion }}
+								</h4>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
+	<div class="row">
+		<div class="col-md-12 countrySelect text-white">
+			<div class="row">
+				<div class="col pt-3 mt-5">
+					<img
+						src="/assets/images/covidMap.png"
+						class="img-fluid pt-3"
+						alt=""
+					/>
+				</div>
+				<div class="col pl-5 pt-5 mt-5">
+					<h2
+						class="pl-sm-5 display-4 text-white pl-sm-5 slide-in-left-f pr-md-4 ml-lg-4"
+					>
+						Check your country situation
+					</h2>
+					<div class="row">
+						<div class="col pt-5">
+							<table class="ml-5 pl-5">
+								<tr>
+									<h4 class="display-4 text-white slide-in-left-s">
+										Total Cases: {{ countryCases }}
+									</h4>
+								</tr>
+								<tr>
+									<td>
+										<h4 class="display-4 text-white slide-in-left-s">
+											Today New Cases: {{ countryNewCases }}
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 class="display-4 text-white slide-in-left-s">
+											Total Deaths: {{ countryDeaths }}
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 class="display-4 text-white slide-in-left-s">
+											Today New Deaths: {{ countryNewDeaths }}
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 class="display-4 text-white slide-in-left-s">
+											People recovered: {{ peopleRecovered }}
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 class="display-4 text-white slide-in-left-s">
+											Active Cases: {{ activeCases }}
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 class="display-4 text-white slide-in-left-s">
+											Critical Cases: {{ criticalCases }}
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 class="display-4 text-white slide-in-left-s">
+											Cases per one million: {{ casesPerOneMillion }}
+										</h4>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h4 class="display-4 text-white slide-in-left-s">
+											Deaths per one million: {{ deathsPerOneMillion }}
+										</h4>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col pl-5 mx-auto pt-5">
+							<select
+								placeholder="Select a country"
+								class="bg-dark text-white btn btn-sm"
+								name="country"
+								[(ngModel)]="selectedValue"
+								(ngModelChange)="onOptionsSelected($event)"
+							>
+								<option *ngFor="let covid of covidCountry" [ngValue]="covid">
+									{{ covid.country }}
+								</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="row">
+			<div class="col">
+				<div class="row">
+					<div class="col-8 mx-auto maskExperiment"></div>
+				</div>
+			</div>
+			<div class="col-md my-auto col-sm-12">
+				<div class="row">
+					<div class="col-11">
+						<h2 class="pl-sm-5 slide-in-left-f text-dark display-2">
+							Are you still doubting about wearing a mask?
+						</h2>
+						<h4 class="pt-sm-3 pl-sm-5 display-2 slide-in-left-f text-justify">
+							A recent demonstration by the Microbiology Lab at Providence
+							Sacred Heart Medical Center & Children's Hospital shows how
+							wearing a mask can protect you (and others) in close proximity and
+							even at a safe 6ft distance.
+							<br />
+							<br />
+							Viruses like COVID-19 can be transmitted when droplets are
+							produced through common behaviors, such as coughing, talking,
+							singing or sneezing. Masks are effective at blocking most of these
+							droplets, even when up close.
+							<br />
+							<br />
+							<a
+								routerLink="/shop"
+								class="btn btn-warning btn-sm text-white slide-in-left-s float-sm-left mb-5"
+							>
+								See all designs
+							</a>
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
+	<div class="row">
+		<div class="col-md my-auto col-sm-8">
+			<div class="row">
+				<div class="col-11">
+					<h2 class="pt-sm-5 pl-sm-5 slide-in-left-f text-dark display-2">
+						HEALTH BENEFITS
+					</h2>
+					<h4 class="pt-sm-3 pl-sm-5 display-2 slide-in-left-f text-justify">
+						The quality of the air we breathe affects our bodies in numerous
+						ways. Cleaning the air can provide you with the following important
+						health benefits:
+						<br />
+						<br />
+						<ul>
+							<li>Decreased allergies and asthma symptoms</li>
+							<li>Improved health & longer life span</li>
+							<li>Cleaner lungs</li>
+							<li>Improved digestion</li>
+							<li>Improved mental health & mood</li>
+						</ul>
+					</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<a
+						routerLink="/shop"
+						class="btn btn-warning btn-sm text-white slide-in-left-s float-sm-right mt-2"
+					>
+						See all designs
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="col health"></div>
+	</div>
+</div>

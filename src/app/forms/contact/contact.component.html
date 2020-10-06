@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8 mx-auto">
+      <div class="card w-50 login-form mx-auto mt-4">
+        <div class="card-body">
+          <h3 class="card-title text-center">Contact Us</h3>
+          <div class="card-text">
+            <form id="login-form" [formGroup]="form" (ngSubmit)="sign()">
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control form-control-sm"
+                  placeholder="E-mail Address"
+                  formControlName="email"
+                  [class.is-invalid]="emailNotValid"
+                />
+                <small *ngIf="emailNotValid" class="text-danger"
+                  >Enter a valid e-mail</small
+                >
+              </div>
+              <div class="form-group">
+                <input
+                  placeholder="Subject"
+                  class="form-control form-control-sm mb-2"
+                  formControlName="subject"
+                  [class.is-invalid]="subjectNotValid"
+                />
+                <small *ngIf="subjectNotValid" class="text-danger"
+                  >This field is required</small
+                >
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="txtMsg"
+                  class="form-control"
+                  placeholder="Your Message"
+                  style="width: 100%; height: 150px;"
+                  formControlName="textMsg"
+                  [class.is-invalid]="textMsgNotValid"
+                ></textarea>
+                <small *ngIf="textMsgNotValid" class="text-danger"
+                  >20 minimum characters required</small
+                >
+              </div>
+
+              <button
+                id="submit-button"
+                type="submit"
+                class="btn btn-primary btn-block"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
