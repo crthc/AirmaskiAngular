@@ -1,17 +1,17 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { HomeComponent } from "./Components/home/home.component";
-import { ShopComponent } from "./Components/shop/shop.component";
-import { AboutComponent } from "./Components/about/about.component";
-import { HealthComponent } from "./Components/health/health.component";
-import { MaskComponent } from "./Components/mask/mask.component";
-import { AccountComponent } from "./forms/account/account.component";
-import { LoginComponent } from "./forms/login/login.component";
-import { ContactComponent } from "./forms/contact/contact.component";
-import { RecoverComponent } from "./forms/recover/recover.component";
-import { LocationComponent } from "./Components/location/location.component";
-import { CartComponent } from "./Components/cart/cart.component";
+import { HomeComponent } from "./Views/home/home.component";
+import { ShopComponent } from "./Views/shop/shop.component";
+import { AboutComponent } from "./Views/about/about.component";
+import { HealthComponent } from "./Views/health/health.component";
+import { MaskComponent } from "./Views/mask/mask.component";
+import { AccountComponent } from "./Components/forms/account/account.component";
+import { LoginComponent } from "./Components/forms/login/login.component";
+import { ContactComponent } from "./Components/forms/contact/contact.component";
+import { RecoverComponent } from "./Components/forms/recover/recover.component";
+import { LocationComponent } from "./Views/location/location.component";
+import { CartComponent } from "./Views/cart/cart.component";
 
 const routes: Routes = [
 	{ path: "home", component: HomeComponent },

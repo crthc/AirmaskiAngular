@@ -1,5 +1,10 @@
+import { ReactiveFormsModule } from '@angular/forms';
+import { CovidCountry } from './../../Services/covid';
+import { Covid } from './../../Services/covid';
 import { Component, OnInit } from "@angular/core";
 import { Covid19Service } from "../../Services/covid19.service";
+import { FormBuilder, Validators } from "@angular/forms";
+
 
 @Component({
 	selector: "app-health",
@@ -8,8 +13,8 @@ import { Covid19Service } from "../../Services/covid19.service";
 })
 export class HealthComponent implements OnInit {
 	covid: any = [];
-	covidCountry: any = [];
-
+	covidCountry: CovidCountry[] = [];
+	
 	countryCases: number;
 	countryNewCases: number;
 	countryDeaths: number;
@@ -20,25 +25,43 @@ export class HealthComponent implements OnInit {
 	casesPerOneMillion: number;
 	deathsPerOneMillion: number;
 
-	selectedValue: string;
 
-	constructor(private covid19service: Covid19Service) {}
-
-	ngOnInit(): void {
+	constructor(private covid19service: Covid19Service, private fb: FormBuilder) {
+		this.covid19service.getData().subscribe((data) => {
+			this.covid = data;
+		});
 		this.covid19service.getCountry().subscribe((data) => {
 			this.covidCountry = data;
-			this.covidCountry.unshift({
-				country: "Select country",
-			});
 		});
 	}
 
-	onOptionsSelected(value: any) {
-		this.customFunction(value);
+  registrationForm = this.fb.group({
+    countryName: ['']
+	})
+	
+
+	// Choose country using select dropdown
+	changeCountry(e) {
+	this.countryName.setValue(e.target.value, {
+		onlySelf: true
+	})
+	this.onSubmit();
 	}
 
+  get countryName() {
+    return this.registrationForm.get('countryName');
+	}
+	
+  onSubmit() {
+		this.customFunction(this.registrationForm.value.countryName);
+		console.log(this.registrationForm.value);
+  }
+
+	ngOnInit(): void {}
+   
+	
 	customFunction(value: any) {
-		this.countryCases = value.cases;
+		this.countryCases= value.cases;
 		this.countryNewCases = value.todayCases;
 		this.countryDeaths = value.deaths;
 		this.countryNewDeaths = value.todayDeaths;

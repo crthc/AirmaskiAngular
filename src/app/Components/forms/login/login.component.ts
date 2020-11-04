@@ -1,7 +1,8 @@
+import { AuthService } from './../../../Services/auth.service';
 import { Component, OnInit } from "@angular/core";
-import { NgForm } from "@angular/forms";
-import { CountryService } from "../../Services/country.service";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: "app-login",
@@ -11,7 +12,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 export class LoginComponent implements OnInit {
 	form: FormGroup;
 
-	constructor(private fb: FormBuilder) {
+	constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
 		this.createForm();
 	}
 
@@ -55,5 +56,28 @@ export class LoginComponent implements OnInit {
 				control.markAsTouched();
 			});
 		}
+
+		Swal.fire({
+      allowOutsideClick: false,
+      icon: 'info',
+      text: 'wait please...',
+    });
+    Swal.showLoading();
+
+    this.auth.login(this.form.value).subscribe(
+      (resp) => {
+        console.log(resp);
+        Swal.close();
+        this.router.navigateByUrl('/shop');
+      },
+      (err) => {
+        console.log(err.error.error.message);
+        Swal.fire({
+          icon: 'error',
+          title: 'Authentication error',
+          text: err.error.error.message,
+        });
+      }
+    );
 	}
 }
