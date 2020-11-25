@@ -1,3 +1,4 @@
+import { AddressComponent } from './Components/forms/address/address.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
@@ -12,6 +13,7 @@ import { ContactComponent } from "./Components/forms/contact/contact.component";
 import { RecoverComponent } from "./Components/forms/recover/recover.component";
 import { LocationComponent } from "./Views/location/location.component";
 import { CartComponent } from "./Views/cart/cart.component";
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
 	{ path: "home", component: HomeComponent },
@@ -23,6 +25,12 @@ const routes: Routes = [
 	{ path: "login", component: LoginComponent },
 	{ path: "contact", component: ContactComponent },
 	{ path: "recover", component: RecoverComponent },
+
+	{ 
+		path: "address", 
+		component: AddressComponent, 
+		canActivate: [AuthGuard], 
+	},
 	{ path: "location", component: LocationComponent },
 	{ path: "cart", component: CartComponent },
 	{ path: "**", pathMatch: "full", redirectTo: "home" },

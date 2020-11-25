@@ -1,28 +1,34 @@
 <div class="row justify-content-center">
-	<div class="col-md-3">
-		<img [src]="mask.img" alt="" class="img-fluid" />
-		<a routerLink="/shop" class="btn btn-outline-warning btn block"
-			>Back to collection</a
-		>
-	</div>
+  <div class="col-md-3">
+    <img [src]="mask.img" alt="" class="img-fluid" />
+    <a routerLink="/shop" class="btn btn-outline-warning btn block"
+      >Back to collection</a
+    >
+  </div>
 
-	<div class="col-md-6">
-		<h3>{{ mask.name | uppercase }}</h3>
+  <div class="col-md-6">
+    <h3>{{ mask.name | uppercase }}</h3>
 
-		<p class="text-primary price">
-			{{ mask.price | currency }}
-			<button (click)="added(mask)" class="btn btn-primary ml-3" id="button">
-				add to basket
-			</button>
-		</p>
-		<hr />
+    <p class="text-primary price">
+      {{ mask.price | currency }}
+      <button (click)="added(mask)" class="btn btn-primary ml-3" id="button">
+        add to basket
+      </button>
+      <a
+        *ngIf="number > 0"
+        routerLink="/cart"
+        class="btn btn-outline-danger btn block ml-2"
+        >Go to cart</a
+      >
+    </p>
+    <hr />
 
-		<p class="text-justify">
-			{{ mask.description }}
-		</p>
-		<p>
-			The Airmaski 2.0 is tested and certified for standards that are similar to
-			the American N95 (Test: GB2626 & Certification: KN95).
-		</p>
-	</div>
+    <p class="text-justify">
+      {{ mask.description }}
+    </p>
+    <p>
+      The Airmaski 2.0 is tested and certified for standards that are similar to
+      the American N95 (Test: GB2626 & Certification: KN95).
+    </p>
+  </div>
 </div>

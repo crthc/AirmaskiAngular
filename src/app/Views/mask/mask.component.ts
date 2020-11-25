@@ -8,8 +8,10 @@ import { CartService } from '../../Services/cart.service';
   templateUrl: './mask.component.html',
   styleUrls: ['./mask.component.css'],
 })
+
 export class MaskComponent implements OnInit {
   mask: any = {};
+  
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -20,9 +22,11 @@ export class MaskComponent implements OnInit {
       this.mask = this._maskService.getMaski(params['id']);
       console.log(this.mask);
     });
+    
   }
   number = 0;
-  added(mask) {
+
+  added(mask:any) {
     this.cartService.addToCart(mask);
 
     let button = document.getElementById('button') as HTMLInputElement;

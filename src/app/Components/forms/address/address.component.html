@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8 mx-auto">
+      <div class="card w-50 login-form mx-auto mt-4">
+        <div class="card-body">
+          <h3 class="card-title text-center">receive your order</h3>
+          <div class="card-text">
+            <form id="login-form" [formGroup]="form" (ngSubmit)="sign()">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Address"
+                  formControlName="address"
+                  [class.is-invalid]="addressNotValid"
+                />
+                <small *ngIf="addressNotValid" class="text-danger"
+                  >Enter a valid address</small
+                >
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="City"
+                    formControlName="city"
+                    [class.is-invalid]="cityNotValid"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputZip">Zip</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Zip code"
+                    formControlName="zip"
+                    [class.is-invalid]="zipNotValid"
+                  />
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="inputState">Country</label>
+                  <select
+                    name="country"
+                    class="form-control form-control-sm"
+                    formControlName="country"
+                    [class.is-invalid]="countryNotValid"
+                  >
+                    <option
+                      *ngFor="let country of countries"
+                      [value]="country.code"
+                    >
+                      {{ country.name }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <button
+                id="submit-button"
+                type="submit"
+                class="btn btn-outline-danger btn-block"
+              >
+                Buy
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

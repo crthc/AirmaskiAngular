@@ -1,5 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { AuthService } from '../../Services/auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
 	selector: "app-header",
@@ -11,7 +14,8 @@ export class HeaderComponent implements OnInit {
 	password: string;
 	resultado: string;
 
-	constructor() {}
+
+	constructor(public auth: AuthService, private router: Router) {}
 
 	ngOnInit(): void {}
 
@@ -32,4 +36,11 @@ export class HeaderComponent implements OnInit {
 			this.resultado = "Hay datos inválidos en el formulario";
 		}
 	}
+
+	out() { 
+		this.auth.logout();
+    this.router.navigateByUrl('/home');
+	}
+	
+
 }
