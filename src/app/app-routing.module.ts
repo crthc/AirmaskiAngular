@@ -2,24 +2,27 @@ import { AddressComponent } from './Components/forms/address/address.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { HomeComponent } from "./Views/home/home.component";
-import { ShopComponent } from "./Views/shop/shop.component";
-import { AboutComponent } from "./Views/about/about.component";
-import { HealthComponent } from "./Views/health/health.component";
-import { MaskComponent } from "./Views/mask/mask.component";
+import { HomeComponent } from "./Pages/home/home.component";
+import { ShopComponent } from "./Pages/shop/shop.component";
+import { AboutModule } from "./Pages/about/about.module";
+import { HealthComponent } from "./Pages/health/health.component";
+import { MaskComponent } from "./Pages/mask/mask.component";
 import { AccountComponent } from "./Components/forms/account/account.component";
 import { LoginComponent } from "./Components/forms/login/login.component";
 import { ContactComponent } from "./Components/forms/contact/contact.component";
 import { RecoverComponent } from "./Components/forms/recover/recover.component";
-import { LocationComponent } from "./Views/location/location.component";
-import { CartComponent } from "./Views/cart/cart.component";
+import { LocationComponent } from "./Pages/location/location.component";
+import { CartComponent } from "./Pages/cart/cart.component";
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
 	{ path: "home", component: HomeComponent },
 	{ path: "shop", component: ShopComponent },
 	{ path: "health", component: HealthComponent },
-	{ path: "about", component: AboutComponent },
+	{
+    path: `about`, loadChildren: () =>
+      import('./Pages/about/about.module').then(m => m.AboutModule)
+  },
 	{ path: "mask/:id", component: MaskComponent },
 	{ path: "account", component: AccountComponent },
 	{ path: "login", component: LoginComponent },
