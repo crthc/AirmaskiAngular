@@ -41,7 +41,7 @@ export class LocationComponent implements OnInit {
 	private addSampleMarker() {
 		const marker = new Marker([41.39406695449921, 2.1632364392280583]).setIcon(
 			icon({
-				iconSize: [36, 40],
+				iconSize: [26, 35],
 				iconAnchor: [13, 41],
 				iconUrl: "assets/marker-icon.png",
 			})

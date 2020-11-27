@@ -2,28 +2,33 @@ import { AddressComponent } from './Components/forms/address/address.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { HomeComponent } from "./Pages/home/home.component";
-import { ShopComponent } from "./Pages/shop/shop.component";
-import { AboutModule } from "./Pages/about/about.module";
-import { HealthComponent } from "./Pages/health/health.component";
 import { MaskComponent } from "./Pages/mask/mask.component";
 import { AccountComponent } from "./Components/forms/account/account.component";
 import { LoginComponent } from "./Components/forms/login/login.component";
 import { ContactComponent } from "./Components/forms/contact/contact.component";
 import { RecoverComponent } from "./Components/forms/recover/recover.component";
-import { LocationComponent } from "./Pages/location/location.component";
-import { CartComponent } from "./Pages/cart/cart.component";
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-	{ path: "home", component: HomeComponent },
-	{ path: "shop", component: ShopComponent },
-	{ path: "health", component: HealthComponent },
+	{ 
+		path: "home", loadChildren: () =>
+			import('./Pages/home/home.module').then(m => m.HomeModule) 
+	},
+	{ 
+		path: "shop", loadChildren: () =>
+			import('./Pages/shop/shop.module').then(m => m.ShopModule) },
+
+	{ path: "health", loadChildren: () =>
+	import('./Pages/health/health.module').then(m => m.HealthModule)
+},
 	{
     path: `about`, loadChildren: () =>
       import('./Pages/about/about.module').then(m => m.AboutModule)
   },
-	{ path: "mask/:id", component: MaskComponent },
+	{ 
+		path: "mask/:id", loadChildren: () =>
+			import('./Pages/mask/mask.module').then(m => m.MaskModule)
+	},
 	{ path: "account", component: AccountComponent },
 	{ path: "login", component: LoginComponent },
 	{ path: "contact", component: ContactComponent },
@@ -34,8 +39,14 @@ const routes: Routes = [
 		component: AddressComponent, 
 		canActivate: [AuthGuard], 
 	},
-	{ path: "location", component: LocationComponent },
-	{ path: "cart", component: CartComponent },
+	{ 
+		path: "location", loadChildren: () =>
+			import('./Pages/location/location.module').then(m => m.LocationModule)
+	},
+	{ 
+		path: "cart", loadChildren: () =>
+			import('./Pages/cart/cart.module').then(m => m.CartModule)
+	},
 	{ path: "**", pathMatch: "full", redirectTo: "home" },
 ];
 
