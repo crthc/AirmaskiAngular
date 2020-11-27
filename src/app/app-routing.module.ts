@@ -1,11 +1,6 @@
-import { AddressComponent } from './Components/forms/address/address.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { AccountComponent } from "./Components/forms/account/account.component";
-import { LoginComponent } from "./Components/forms/login/login.component";
-import { ContactComponent } from "./Components/forms/contact/contact.component";
-import { RecoverComponent } from "./Components/forms/recover/recover.component";
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -17,8 +12,9 @@ const routes: Routes = [
 		path: "shop", loadChildren: () =>
 			import('./Pages/shop/shop.module').then(m => m.ShopModule) },
 
-	{ path: "health", loadChildren: () =>
-	import('./Pages/health/health.module').then(m => m.HealthModule)
+	{ 
+		path: "health", loadChildren: () =>
+			import('./Pages/health/health.module').then(m => m.HealthModule)
 },
 	{
     path: `about`, loadChildren: () =>
@@ -28,14 +24,27 @@ const routes: Routes = [
 		path: "mask/:id", loadChildren: () =>
 			import('./Pages/mask/mask.module').then(m => m.MaskModule)
 	},
-	{ path: "account", component: AccountComponent },
-	{ path: "login", component: LoginComponent },
-	{ path: "contact", component: ContactComponent },
-	{ path: "recover", component: RecoverComponent },
+	{ 
+		path: "account", loadChildren: () =>
+			import('./Components/forms/account/account.module').then(m => m.AccountModule)
+	},
+	{ 
+		path: "login", loadChildren: () =>
+			import('./Components/forms/login/login.module').then(m => m.LoginModule)
+	 },
+	{ 
+		path: "contact", loadChildren: () =>
+			import('./Components/forms/contact/contact.module').then(m => m.ContactModule)
+	},
+	{ 
+		path: "recover", loadChildren: () =>
+			import('./Components/forms/recover/recover.module').then(m => m.RecoverModule) 
+	},
 
 	{ 
 		path: "address", 
-		component: AddressComponent, 
+		loadChildren: () =>
+			import('./Components/forms/address/address.module').then(m => m.AddressModule),
 		canActivate: [AuthGuard], 
 	},
 	{ 

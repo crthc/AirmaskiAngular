@@ -9,11 +9,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./Components/header/header.component";
 import { FooterComponent } from "./Components/footer/footer.component";
-import { AccountComponent } from "./Components/forms/account/account.component";
-import { LoginComponent } from "./Components/forms/login/login.component";
-import { ContactComponent } from "./Components/forms/contact/contact.component";
-import { RecoverComponent } from "./Components/forms/recover/recover.component";
-import { AddressComponent } from './Components/forms/address/address.component';
 
 //Services
 
@@ -27,12 +22,7 @@ import { LeafletModule } from "@asymmetrik/ngx-leaflet";
 	declarations: [
 		AppComponent,
 		HeaderComponent,
-		FooterComponent,
-		AccountComponent,
-		LoginComponent,
-		ContactComponent,
-		RecoverComponent,
-		AddressComponent
+		FooterComponent
 	
 	],
 	imports: [
