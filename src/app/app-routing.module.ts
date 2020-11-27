@@ -2,7 +2,6 @@ import { AddressComponent } from './Components/forms/address/address.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { MaskComponent } from "./Pages/mask/mask.component";
 import { AccountComponent } from "./Components/forms/account/account.component";
 import { LoginComponent } from "./Components/forms/login/login.component";
 import { ContactComponent } from "./Components/forms/contact/contact.component";
