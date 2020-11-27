@@ -1,5 +1,4 @@
 .slogan {
-  background: url("/assets/images/p.jpg");
   background-position: center;
   background-size: cover;
   height: 530px;
@@ -34,7 +33,6 @@ td {
 }
 
 .COVID {
-  background: url("/assets/images/covid3.png");
   background-position: center;
   background-size: cover;
   height: 640px;
@@ -42,7 +40,6 @@ td {
 }
 
 .maskExperiment {
-  background: url("/assets/images/maskExperiment.jpeg");
   background-position: center;
   background-size: cover;
   height: 640px;
@@ -54,7 +51,6 @@ td {
 }
 
 .health {
-  background: url("/assets/images/health.png");
   background-position: top;
   background-size: cover;
   height: 640px;

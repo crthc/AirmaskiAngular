@@ -1,6 +1,10 @@
 <div>
   <div class="row">
-    <div class="col-md-12 slogan">
+    <div
+      class="col-md-12 slogan"
+      [defaultImage]="defaultWoman"
+      [lazyLoad]="woman"
+    >
       <div class="row">
         <div class="col-md-10 col-sm-10">
           <h2
@@ -27,7 +31,11 @@
 
 <div>
   <div class="row">
-    <div class="col-md-12 COVID">
+    <div
+      class="col-md-12 COVID"
+      [defaultImage]="defaultCovid"
+      [lazyLoad]="covidImg"
+    >
       <div class="row">
         <div class="col-md-10 col-sm-10 pl-5">
           <h2
@@ -119,9 +127,10 @@
       <div class="row">
         <div class="col pt-3 mt-5">
           <img
-            src="/assets/images/covidMap.png"
+            [defaultImage]="defaultcovidMap"
+            [lazyLoad]="covidMap"
             class="img-fluid pt-3"
-            alt=""
+            alt="covidMap"
           />
         </div>
         <div class="col pl-5 pt-5 mt-5">
@@ -220,7 +229,11 @@
     <div class="row">
       <div class="col">
         <div class="row">
-          <div class="col-8 mx-auto maskExperiment"></div>
+          <div
+            class="col-8 mx-auto maskExperiment"
+            [defaultImage]="defaultResearch"
+            [lazyLoad]="research"
+          ></div>
         </div>
       </div>
       <div class="col-md my-auto col-sm-12">
@@ -291,6 +304,6 @@
         </div>
       </div>
     </div>
-    <div class="col health"></div>
+    <div class="col health" [defaultImage]="defaultKid" [lazyLoad]="kid"></div>
   </div>
 </div>

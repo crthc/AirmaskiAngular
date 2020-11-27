@@ -25,6 +25,23 @@ export class HealthComponent implements OnInit {
 	casesPerOneMillion: number;
 	deathsPerOneMillion: number;
 
+	//Lazy load images
+
+	defaultWoman: string = '../../../assets/images/p.jpg';
+	woman: string = '../../../assets/images/p.jpg';
+
+	defaultcovidMap: string = '../../../assets/images/covidMap.png';
+	covidMap: string = '../../../assets/images/covidMap.png';
+
+	defaultCovid: string = '../../../assets/images/covid3.png';
+	covidImg: string = '../../../assets/images/covid3.png';
+
+	defaultKid: string = '../../../assets/images/health.png';
+	kid: string = '../../../assets/images/health.png';
+
+	defaultResearch: string = '../../../assets/images/maskExperiment.jpeg';
+	research: string = '../../../assets/images/maskExperiment.jpeg';
+
 
 	constructor(private covid19service: Covid19Service, private fb: FormBuilder) {
 		this.covid19service.getData().subscribe((data) => {
