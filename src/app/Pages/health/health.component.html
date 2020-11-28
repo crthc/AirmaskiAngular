@@ -121,11 +121,11 @@
   </div>
 </div>
 
-<div [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+<div class="row" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col-md-12 countrySelect text-white">
       <div class="row">
-        <div class="col pt-3 mt-5">
+        <div class="col pt-3 mt-5 d-none d-sm-block">
           <img
             [defaultImage]="defaultcovidMap"
             [lazyLoad]="covidMap"
@@ -140,7 +140,7 @@
             Check your country situation
           </h2>
           <div class="row">
-            <div class="col pt-5">
+            <div class="col-xs-12 order-2 order-sm-6 pt-5">
               <table class="ml-5 pl-5">
                 <tr>
                   <h4 class="display-4 text-white slide-in-left-s">
@@ -205,7 +205,7 @@
                 </tr>
               </table>
             </div>
-            <div class="col pl-5 mx-auto pt-5">
+            <div class="col-xs-12 order-1 order-sm-6 pl-5 mx-auto pt-5">
               <select
                 placeholder="Select a country"
                 class="bg-dark text-white btn btn-sm"
@@ -224,45 +224,45 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div>
-    <div class="row">
-      <div class="col">
-        <div class="row">
-          <div
-            class="col-8 mx-auto maskExperiment"
-            [defaultImage]="defaultResearch"
-            [lazyLoad]="research"
-          ></div>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div
+          class="col-10 maskExperiment"
+          [defaultImage]="defaultResearch"
+          [lazyLoad]="research"
+        ></div>
       </div>
-      <div class="col-md my-auto col-sm-12">
-        <div class="row">
-          <div class="col-11">
-            <h2 class="pl-sm-5 slide-in-left-f text-dark display-2">
-              Are you still doubting about wearing a mask?
-            </h2>
-            <h4 class="pt-sm-3 pl-sm-5 display-2 slide-in-left-f text-justify">
-              A recent demonstration by the Microbiology Lab at Providence
-              Sacred Heart Medical Center & Children's Hospital shows how
-              wearing a mask can protect you (and others) in close proximity and
-              even at a safe 6ft distance.
-              <br />
-              <br />
-              Viruses like COVID-19 can be transmitted when droplets are
-              produced through common behaviors, such as coughing, talking,
-              singing or sneezing. Masks are effective at blocking most of these
-              droplets, even when up close.
-              <br />
-              <br />
-              <a
-                routerLink="/shop"
-                class="btn btn-warning btn-sm text-white slide-in-left-s float-sm-left mb-5"
-              >
-                See all designs
-              </a>
-            </h4>
-          </div>
+    </div>
+    <div class="col-md my-auto col-sm-12">
+      <div class="row">
+        <div class="col-11">
+          <h2 class="pl-sm-5 slide-in-left-f text-dark display-2">
+            Are you still doubting about wearing a mask?
+          </h2>
+          <h4 class="pt-sm-3 pl-sm-5 display-2 slide-in-left-f text-justify">
+            A recent demonstration by the Microbiology Lab at Providence Sacred
+            Heart Medical Center & Children's Hospital shows how wearing a mask
+            can protect you (and others) in close proximity and even at a safe
+            6ft distance.
+            <br />
+            <br />
+            Viruses like COVID-19 can be transmitted when droplets are produced
+            through common behaviors, such as coughing, talking, singing or
+            sneezing. Masks are effective at blocking most of these droplets,
+            even when up close.
+            <br />
+            <br />
+            <a
+              routerLink="/shop"
+              class="btn btn-warning btn-sm text-white slide-in-left-s float-sm-left mb-5"
+            >
+              See all designs
+            </a>
+          </h4>
         </div>
       </div>
     </div>
