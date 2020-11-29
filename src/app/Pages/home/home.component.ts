@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  defaultHome: string = '../../../assets/images/homeimage_rsz.jpg';
+  home: string = '../../../assets/images/homeImage2.jpg';
+
+  defaultMask: string = '../../../assets/images/whymasks_rsz.jpg';
+  maskImg: string = '../../../assets/images/whyMasks.jpg';
+
   constructor() { }
 
   ngOnInit(): void {
