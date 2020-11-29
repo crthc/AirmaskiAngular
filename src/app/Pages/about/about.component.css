@@ -21,28 +21,18 @@ h4 {
 }
 
 .CEO {
-  background: url("/assets/images/aboutusCEO.jpeg");
   background-position: right;
   background-size: cover;
   height: 640px;
   padding-top: 150px;
 }
 .MNT {
-  background: url("/assets/images/mnt-story2.jpg");
   background-position: center;
   background-size: cover;
   height: 640px;
   padding-top: 150px;
 }
 .AIR {
-  background: url("/assets/images/airMatters.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 640px;
-  padding-top: 150px;
-}
-.MEDIA {
-  background: url("/assets/images/mediaAbout.png");
   background-position: center;
   background-size: cover;
   height: 640px;

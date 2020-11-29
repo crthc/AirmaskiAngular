@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  //Lazy load images
+
+	defaultCEO: string = '../../../assets/images/aboutusCEO.jpeg';
+	ceo: string = '../../../assets/images/aboutusCEO.jpeg';
+
   constructor() { }
 
   ngOnInit(): void {
