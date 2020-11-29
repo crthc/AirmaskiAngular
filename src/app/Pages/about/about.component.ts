@@ -9,10 +9,13 @@ export class AboutComponent implements OnInit {
 
   //Lazy load images
 
-	defaultCEO: string = '../../../assets/images/aboutusCEO.jpeg';
+	defaultWoman: string = '../../../assets/images/aboutusimg_rsz.jpg';
+  woman: string = '../../../assets/images/AboutUsIMG.jpg';
+
+	defaultCEO: string = '../../../assets/images/rsz_aboutusceo.jpg';
   ceo: string = '../../../assets/images/aboutusCEO.jpeg';
   
-	defaultAir: string = '../../../assets/images/airMatters.jpg';
+	defaultAir: string = '../../../assets/images/rsz_airmatters.jpg';
 	air: string = '../../../assets/images/airMatters.jpg';
 
   constructor() { }

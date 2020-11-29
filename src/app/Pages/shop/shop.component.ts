@@ -7,6 +7,9 @@ import { MaskService, Mask } from "../../Services/mask.service";
 	styleUrls: ["./shop.component.css"],
 })
 export class ShopComponent implements OnInit {
+	defaultMask: string = '../../../assets/images/rsz_quartzgrey.jpg';
+	
+
 	mask: Mask[] = [];
 
 	constructor(private _maskService: MaskService) {}
