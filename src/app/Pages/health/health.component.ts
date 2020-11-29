@@ -25,6 +25,11 @@ export class HealthComponent implements OnInit {
 	casesPerOneMillion: number;
 	deathsPerOneMillion: number;
 
+	defaultProblem: string = '../../../assets/images/p.jpg';
+	problem: string = '../../../assets/images/p.jpg';
+	
+	defaultCovid: string = '../../../assets/images/covid3.png';
+	covidImg: string = '../../../assets/images/covid3.png';
 
 
 	constructor(private covid19service: Covid19Service, private fb: FormBuilder) {

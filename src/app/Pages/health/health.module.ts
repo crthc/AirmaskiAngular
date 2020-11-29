@@ -5,6 +5,7 @@ import { HealthRoutingModule } from './health-routing.module';
 import { HealthComponent } from './health.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LazyImageModule } from 'ng-lazy-image';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { LazyImageModule } from 'ng-lazy-image';
     HealthRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
-    LazyImageModule
+    LazyImageModule,
+    LazyLoadImageModule
   ]
 })
 export class HealthModule { }

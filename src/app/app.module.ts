@@ -16,8 +16,8 @@ import { MaskService } from "./Services/mask.service";
 import { ValidatorsService } from "./Services/validators.service";
 import { Covid19Service } from "./Services/covid19.service";
 import { LeafletModule } from "@asymmetrik/ngx-leaflet";
-import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { LazyImageModule } from 'ng-lazy-image';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 
 @NgModule({
@@ -36,8 +36,8 @@ import { LazyImageModule } from 'ng-lazy-image';
 		ReactiveFormsModule,
 		LeafletModule,
 		BrowserAnimationsModule,
-		LazyLoadImageModule,
-		LazyImageModule
+		LazyImageModule,
+		LazyLoadImageModule
 		
 	],
 	providers: [MaskService, ValidatorsService, Covid19Service],

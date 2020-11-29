@@ -56,11 +56,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="col CEO"
-      data-src="../../../assets/images/aboutusCEO.jpeg"
-      loading="lazy"
-    ></div>
+    <div class="col CEO" [defaultImage]="defaultCEO" [lazyLoad]="ceo"></div>
   </div>
 </div>
 
@@ -128,8 +124,8 @@
     </div>
     <div
       class="col-md col-sm-12 AIR"
-      data-src="../../../assets/images/airMatters.jpg"
-      loading="lazy"
+      [defaultImage]="defaultAir"
+      [lazyLoad]="air"
     ></div>
   </div>
 </div>
