@@ -14,6 +14,8 @@ export class HeaderComponent implements OnInit {
 	password: string;
 	resultado: string;
 
+	open:boolean = false;
+	
 
 	constructor(public auth: AuthService, private router: Router) {}
 
@@ -42,5 +44,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/home');
 	}
 	
-
+	toggleClass(){
+		this.open = !this.open;
+	}
 }
