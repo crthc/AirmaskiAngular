@@ -1,9 +1,7 @@
-import { ReactiveFormsModule } from '@angular/forms';
 import { CovidCountry } from './../../Services/covid';
-import { Covid } from './../../Services/covid';
 import { Component, OnInit } from "@angular/core";
 import { Covid19Service } from "../../Services/covid19.service";
-import { FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder} from "@angular/forms";
 
 
 @Component({
