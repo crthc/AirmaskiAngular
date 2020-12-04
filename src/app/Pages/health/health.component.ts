@@ -27,6 +27,8 @@ export class HealthComponent implements OnInit {
 
 	defaultProblem: string = '../../../assets/images/p_rsz.jpg';
 	problem: string = '../../../assets/images/p.jpg';
+	problemResize: string = '../../../assets/images/min-2.jpg';
+	size: boolean;
 	
 	defaultCovid: string = '../../../assets/images/covid3_rsz.jpg';
 	covidImg: string = '../../../assets/images/covid3.png';
@@ -66,7 +68,13 @@ export class HealthComponent implements OnInit {
 		console.log(this.registrationForm.value);
   }
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		if (window.screen.width <= 600) {
+			this.size = false;
+		}else{
+			this.size = true;
+		}
+	}
    
 	
 	customFunction(value: any) {
