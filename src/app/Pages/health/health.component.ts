@@ -63,7 +63,7 @@ export class HealthComponent implements OnInit {
 	
   onSubmit() {
 		this.customFunction(this.registrationForm.value.countryName);
-		console.log(this.registrationForm.value);
+
   }
 
 	ngOnInit(): void {
