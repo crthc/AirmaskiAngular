@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   defaultHome: string = '../../../assets/images/homeimage_rsz.jpg';
   home: string = '../../../assets/images/homeImage2.jpg';
 
-  defaultMask: string = '../../../assets/images/whymasks_rsz.jpg';
+  defaultMask: string = '../../../assets/images/whyMasks-2.jpg';
   maskImg: string = '../../../assets/images/whyMasks.jpg';
 
   constructor() { }

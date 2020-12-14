@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import AOS from 'aos';
+
 
 
 @Component({
@@ -23,7 +23,7 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    AOS.init();
+
   }
 
 }

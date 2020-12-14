@@ -1,8 +1,8 @@
+
 import { CovidCountry } from './../../Services/covid';
 import { Component, OnInit } from "@angular/core";
 import { Covid19Service } from "../../Services/covid19.service";
 import { FormBuilder} from "@angular/forms";
-import AOS from 'aos';
 
 
 @Component({
@@ -73,7 +73,6 @@ export class HealthComponent implements OnInit {
 		}else{
 			this.size = true;
 		}
-		AOS.init();
 	}
    
 	
