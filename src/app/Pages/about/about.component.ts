@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 
-
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -17,7 +16,7 @@ export class AboutComponent implements OnInit {
 	defaultCEO: string = '../../../assets/images/rsz_aboutusceo.jpg';
   ceo: string = '../../../assets/images/aboutusCEO.jpeg';
   
-	defaultAir: string = '../../../assets/images/rsz_airmatters.jpg';
+	defaultAir: string = '../../../assets/images/rsz_airmatters.png';
 	air: string = '../../../assets/images/airMatters.jpg';
 
   constructor() { }
