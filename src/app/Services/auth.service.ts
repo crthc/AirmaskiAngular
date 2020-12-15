@@ -11,6 +11,8 @@ export class AuthService {
   private apikey = "AIzaSyBPSycQrbqbL-jeWFsWiE3bH0zZKaJNFKE";
 
   userToken: string;
+
+  logged:boolean;
   
 
   // Create new user
@@ -27,6 +29,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
+    this.logged = false;
   }
 
   login(user: UserModel) {
@@ -39,6 +42,7 @@ export class AuthService {
       .pipe(
         map((resp) => {
           this.saveToken(resp['idToken']);
+          this.logged = true;
           return resp;
         })
       );

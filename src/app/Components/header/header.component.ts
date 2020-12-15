@@ -13,8 +13,6 @@ export class HeaderComponent implements OnInit {
 	username: string;
 	password: string;
 	resultado: string;
-
-	open:boolean = false;
 	
 
 	constructor(public auth: AuthService, private router: Router) {}
@@ -26,10 +24,7 @@ export class HeaderComponent implements OnInit {
 		password: new FormControl("", [Validators.required]),
 	});
 
-	/**
-	 * Process the form we have. Send to whatever backend
-	 * Only alerting for now
-	 */
+
 	processForm() {
 		if (this.formularioLogin.valid) {
 			const allInfo = `Username: ${this.username}. Pwd: ${this.password}.`;
@@ -44,7 +39,5 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/home');
 	}
 	
-	toggleClass(){
-		this.open = !this.open;
-	}
+
 }

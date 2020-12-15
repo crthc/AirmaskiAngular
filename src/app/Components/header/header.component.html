@@ -15,13 +15,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <ul class="navbar-nav mx-auto justify-content-center text-center">
+      <ul
+        class="navbar-nav mx-auto justify-content-center text-center"
+        data-toggle="collapse"
+        data-target=".navbar-collapse.show"
+      >
         <li class="nav-item">
           <a
             class="nav-link m-md-3 m-lg-5 text-dark text-decoration-none hvr-underline-from-center hvr-grow"
             routerLink="/home"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
             >AIRMASKI</a
           >
         </li>
@@ -29,8 +31,6 @@
           <a
             class="nav-link m-md-3 m-lg-5 text-dark text-decoration-none hvr-underline-from-center hvr-grow"
             routerLink="/shop"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
             >SHOP</a
           >
         </li>
@@ -38,8 +38,6 @@
           <a
             class="nav-link m-md-3 m-lg-5 text-dark text-decoration-none hvr-underline-from-center hvr-grow"
             routerLink="/health"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
             >STAY HEALTHY</a
           >
         </li>
@@ -47,8 +45,6 @@
           <a
             class="nav-link m-md-3 m-lg-5 text-dark text-decoration-none hvr-underline-from-center hvr-grow"
             routerLink="/about"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
             >OUR STORY</a
           >
         </li>
@@ -56,24 +52,21 @@
           <a
             class="nav-link m-md-3 m-lg-5 text-dark text-decoration-none hvr-grow"
             routerLink="/cart"
-            data-toggle="collapse"
-            data-target=".navbar-collapse.show"
             >CART <img src="/assets/images/cart.svg" class="img-fluid"
           /></a>
         </li>
         <li>
           <button
-            *ngIf="!auth.userToken"
+            *ngIf="!auth.logged"
             class="btn btn-outline-primary my-2 my-sm-0 pl-4 pr-4 m-md-3 m-lg-5"
             routerLink="/login"
           >
             Log In
           </button>
           <button
-            *ngIf="auth.userToken"
+            *ngIf="auth.logged"
             (click)="out()"
             class="btn btn-outline-danger my-2 my-sm-0 pl-4 pr-4 m-md-3 m-lg-5"
-            routerLink="/home"
           >
             Log out
           </button>

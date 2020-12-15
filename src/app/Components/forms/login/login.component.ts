@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 	form: FormGroup;
+	open:string;
 
 	constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
 		this.createForm();
@@ -67,7 +68,8 @@ export class LoginComponent implements OnInit {
     this.auth.login(this.form.value).subscribe(
       (resp) => {
         console.log(resp);
-        Swal.close();
+				Swal.close();
+				this.open = 'false';
         this.router.navigateByUrl('/shop');
       },
       (err) => {
