@@ -123,7 +123,12 @@
   (ngSubmit)="onSubmit()"
 >
   <div class="col pt-3 mt-5 d-none d-sm-block">
-    <img [lazyLoad]="imgCovidMap" class="img-fluid pt-3" alt="covidMap" />
+    <img
+      data-src="../../../assets/images/covidMap.png"
+      loading="lazy"
+      class="img-fluid pt-3"
+      alt="covidMap"
+    />
   </div>
   <div class="col pl-5 pt-5 mt-5">
     <h2 class="pl-sm-5 display-4 text-white pl-sm-5 pr-md-4 ml-lg-4">
@@ -295,6 +300,10 @@
         </div>
       </div>
     </div>
-    <div class="col health" [lazyLoad]="imgKid"></div>
+    <div
+      class="col health"
+      data-src="../../../assets/images/health.png"
+      loading="lazy"
+    ></div>
   </div>
 </div>
