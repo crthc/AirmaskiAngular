@@ -59,6 +59,7 @@ export class AuthService {
       .pipe(
         map((resp) => {
           this.saveToken(resp['idToken']);
+          this.logged = true;
           return resp;
         })
       );

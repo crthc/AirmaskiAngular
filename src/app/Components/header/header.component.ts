@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
 	username: string;
 	password: string;
 	resultado: string;
+	accepted: Boolean;
 	
 
 	constructor(public auth: AuthService, private router: Router) {}
@@ -37,6 +38,13 @@ export class HeaderComponent implements OnInit {
 	out() { 
 		this.auth.logout();
     this.router.navigateByUrl('/home');
+	}
+
+	uncheck(){
+		this.accepted = false;
+	}
+	check(){
+		this.accepted = true;
 	}
 	
 

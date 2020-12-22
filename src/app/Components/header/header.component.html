@@ -3,22 +3,30 @@
     <a class="navbar-brand" href="index.html"
       ><img src="./assets/images/Logo.jpg" width="64" height="64"
     /></a>
-    <button
-      class="navbar-toggler navbar-toggler-right"
-      type="button"
+    <input
+      [checked]="accepted"
+      (click)="check()"
+      type="checkbox"
+      class="openSidebarMenu navbar-toggler navbar-toggler-right"
+      id="openSidebarMenu"
       data-toggle="collapse"
-      data-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01"
+      data-target="#openSidebarMenu"
+      aria-controls="openSidebarMenu"
       aria-expanded="false"
       aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    />
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+
+    <div class="collapse navbar-collapse" id="openSidebarMenu">
       <ul
         class="navbar-nav mx-auto justify-content-center text-center"
         data-toggle="collapse"
         data-target=".navbar-collapse.show"
+        (click)="uncheck()"
       >
         <li class="nav-item">
           <a

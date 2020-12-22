@@ -6,6 +6,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 
+
 @Component({
 	selector: "app-account",
 	templateUrl: "./account.component.html",
@@ -13,6 +14,7 @@ import { Router } from '@angular/router';
 })
 export class AccountComponent implements OnInit {
 	form: FormGroup;
+	open: string;
 	
 	countries: any[] = [];
 
@@ -129,7 +131,8 @@ export class AccountComponent implements OnInit {
 		this.auth.newUser(this.form.value).subscribe(
       (resp) => {
         console.log(resp);
-        Swal.close();
+				Swal.close();
+				this.open = 'false';
         this.router.navigateByUrl('/shop');
       },
       (err) => {
