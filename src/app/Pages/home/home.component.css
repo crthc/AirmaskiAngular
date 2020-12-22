@@ -22,6 +22,7 @@ h4 {
 video {
   width: 80%;
 }
+
 .shake-vertical {
   width: 16%;
   -webkit-animation: shake-vertical 25s cubic-bezier(0.455, 0.03, 0.515, 0.955)
