@@ -33,7 +33,7 @@ export class HealthComponent implements OnInit {
 	imgKid: string = '../../../assets/images/health.png';
 	
 	defaultCovid: string = '../../../assets/images/covid3_rsz.jpg';
-	covidImg: string = '../../../assets/images/covid3.png';
+	covidImg: string = '../../../assets/images/covid3.jpg';
 
 	defaultResch: string = '../../../assets/images/maskexperiment_rsz.jpg';
 	reschImg: string = '../../../assets/images/maskExperiment.jpeg';
