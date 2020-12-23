@@ -2,15 +2,13 @@
   --animate-duration: 2s;
 }
 
-.ng-lazyloading {
-  filter: blur(1.5rem);
-}
 .ng-lazyloaded {
-  transition: 1s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .slogan {
   background-position: center;
+  background-color: #ece9dc;
   background-size: cover;
   height: 530px;
   padding-top: 150px;
@@ -34,18 +32,21 @@ h4 {
 .CEO {
   background-position: right;
   background-size: cover;
+  background-color: black;
   height: 640px;
   padding-top: 150px;
 }
 .MNT {
   background-position: center;
   background-size: cover;
+  background-color: black;
   height: 640px;
   padding-top: 150px;
 }
 .AIR {
   background-position: center;
   background-size: cover;
+  background-color: black;
   height: 640px;
   padding-top: 150px;
 }

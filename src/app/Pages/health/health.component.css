@@ -1,12 +1,13 @@
-.animate__animated {
+/* .animate__animated {
   --animate-duration: 2s;
-}
+} */
 
 .ng-lazyloaded {
   transition: 1s ease-out;
 }
 .slogan {
   background-position: center;
+  background-color: black;
   background-size: cover;
   height: 530px;
   padding-top: 150px;
@@ -15,6 +16,7 @@
   .slogan {
     background: url("/assets/images/min-4.jpg");
     background-position: center;
+    background-color: black;
     background-size: cover;
     height: 530px;
     padding-top: 150px;
@@ -42,6 +44,7 @@ td {
 .COVID {
   background-position: center;
   background-size: cover;
+  background-color: black;
   height: 640px;
   padding-top: 150px;
 }
@@ -49,6 +52,7 @@ td {
 .maskExperiment {
   background-position: center;
   background-size: cover;
+  background-color: black;
   height: 640px;
   padding-top: 150px;
 }
@@ -66,6 +70,5 @@ td {
 
 .countrySelect {
   background-color: #1c272c;
-  /* background-color: rgb(31, 42, 46); */
   height: 640px;
 }
