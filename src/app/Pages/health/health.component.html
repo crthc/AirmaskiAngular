@@ -1,10 +1,6 @@
 <div>
   <div class="row">
-    <div
-      class="col-md-12 slogan"
-      [defaultImage]="defaultProblem"
-      [lazyLoad]="size ? problem : problemResize"
-    >
+    <div class="col-md-12 slogan" [lazyLoad]="size ? problem : problemResize">
       <div class="row">
         <div class="col-md-10 col-sm-10">
           <h2
@@ -31,11 +27,7 @@
 
 <div>
   <div class="row">
-    <div
-      class="col-md-12 COVID"
-      [defaultImage]="defaultCovid"
-      [lazyLoad]="covidImg"
-    >
+    <div class="col-md-12 COVID" [lazyLoad]="covidImg">
       <div data-aos="fade-down" data-aos-duration="1000" class="row">
         <div class="col-md-10 col-sm-10 pl-2 pl-md-5">
           <h2 class="pl-sm-5 display-4 text-white pr-md-4 ml-lg-4">
@@ -226,8 +218,8 @@
           data-aos="fade-right"
           data-aos-duration="1500"
           class="col-10 maskExperiment"
-          [defaultImage]="defaultResch"
           [lazyLoad]="reschImg"
+          offset="100"
         ></div>
       </div>
     </div>
@@ -300,10 +292,6 @@
         </div>
       </div>
     </div>
-    <div
-      class="col health"
-      data-src="../../../assets/images/health.png"
-      loading="lazy"
-    ></div>
+    <div class="col health" [lazyLoad]="healthImg"></div>
   </div>
 </div>

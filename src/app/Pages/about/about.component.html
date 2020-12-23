@@ -1,10 +1,6 @@
 <div>
   <div class="row">
-    <div
-      class="col-md-12 slogan"
-      [defaultImage]="defaultWoman"
-      [lazyLoad]="woman"
-    >
+    <div class="col-md-12 slogan" [lazyLoad]="woman">
       <div class="row">
         <div class="col-md-5 col-sm-8">
           <h2
@@ -58,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="col CEO" [defaultImage]="defaultCEO" [lazyLoad]="ceo"></div>
+    <div class="col CEO" [lazyLoad]="ceo"></div>
   </div>
 </div>
 
@@ -66,8 +62,8 @@
   <div class="row">
     <div
       class="col MNT order-2 order-md-6"
-      data-src="../../../assets/images/mnt-story2.jpg"
-      loading="lazy"
+      [lazyLoad]="mountain"
+      offset="100"
     ></div>
     <div class="col-md my-auto col-sm-12 order-1 order-md-6">
       <div class="row">
@@ -122,12 +118,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="col-md col-sm-12 AIR"
-      [defaultImage]="defaultAir"
-      [lazyLoad]="air"
-      offset="100"
-    ></div>
+    <div class="col-md col-sm-12 AIR" [lazyLoad]="air" offset="100"></div>
   </div>
 </div>
 
@@ -144,7 +135,7 @@
     </div>
     <div class="col-md my-sm-auto mx-auto col-12">
       <div class="row">
-        <div data-aos="zoom-in-right" data-aos-duration="1500" class="col-11">
+        <div data-aos="zoom-in-right" data-aos-duration="1000" class="col-11">
           <h2 class="pt-sm-5 pl-sm-5 text-dark display-2">
             INNOVATION GETS ATTENTION
           </h2>
