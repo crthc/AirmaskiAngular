@@ -1,6 +1,10 @@
 .animate__animated {
   --animate-duration: 2s;
 }
+
+.ng-lazyloaded {
+  transition: 3s ease-out;
+}
 .slogan {
   background-position: center;
   background-size: cover;
