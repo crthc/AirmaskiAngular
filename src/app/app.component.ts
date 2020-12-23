@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import AOS from 'aos';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +11,8 @@ export class AppComponent {
   title = 'airmaski';
 
   ngOnInit(): void {
-		AOS.init();
+    AOS.init();
+    
 	}
    
 }
