@@ -8,12 +8,14 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 
 
+
 @NgModule({
   declarations: [AboutComponent],
   imports: [
     CommonModule,
     AboutRoutingModule,
     LazyLoadImageModule
+
   ]
 })
 export class AboutModule { }

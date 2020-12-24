@@ -21,7 +21,9 @@ export class AboutComponent implements OnInit {
   mountain: string = "../../../assets/images/mnt-story2.jpg";
 
 	//defaultAir: string = '../../../assets/images/rsz_airmatters.png';
-	air: string = '../../../assets/images/airMatters.jpg';
+  air: string = '../../../assets/images/airMatters.jpg';
+  
+  mobile: string = '../../../assets/images/mediaAbout.png'
 
   constructor() { }
 
