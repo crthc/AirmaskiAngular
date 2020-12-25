@@ -20,7 +20,6 @@ export class MaskComponent implements OnInit {
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.mask = this._maskService.getMaski(params['id']);
-      console.log(this.mask);
     });
     
   }

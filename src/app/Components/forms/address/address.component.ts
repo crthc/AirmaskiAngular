@@ -28,6 +28,7 @@ export class AddressComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
+		console.log(this.auth.userToken);
 		this.countryService.getCountries().subscribe((countries) => 
 			this.countries = countries
 			);

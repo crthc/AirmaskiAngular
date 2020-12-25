@@ -1,7 +1,9 @@
+
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { AuthGuard } from './guards/auth.guard';
+import { LoggedGuard } from './guards/logged.guard';
 
 const routes: Routes = [
 	{ 
@@ -25,12 +27,16 @@ const routes: Routes = [
 			import('./Pages/mask/mask.module').then(m => m.MaskModule)
 	},
 	{ 
-		path: "account", loadChildren: () =>
-			import('./Components/forms/account/account.module').then(m => m.AccountModule)
+		path: "account", 
+		loadChildren: () =>
+			import('./Components/forms/account/account.module').then(m => m.AccountModule),
+		canActivate: [LoggedGuard], 
 	},
 	{ 
-		path: "login", loadChildren: () =>
-			import('./Components/forms/login/login.module').then(m => m.LoginModule)
+		path: "login", 
+		loadChildren: () =>
+			import('./Components/forms/login/login.module').then(m => m.LoginModule),
+		canActivate: [LoggedGuard], 
 	 },
 	{ 
 		path: "contact", loadChildren: () =>
@@ -46,6 +52,7 @@ const routes: Routes = [
 		loadChildren: () =>
 			import('./Components/forms/address/address.module').then(m => m.AddressModule),
 		canActivate: [AuthGuard], 
+
 	},
 	{ 
 		path: "location", loadChildren: () =>

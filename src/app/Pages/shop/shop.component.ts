@@ -17,6 +17,5 @@ export class ShopComponent implements OnInit {
 	ngOnInit(): void {
 		this.mask = this._maskService.getMask();
 
-		console.log(this.mask);
 	}
 }

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 	styleUrls: ["./header.component.css"],
 })
 export class HeaderComponent implements OnInit {
+	show: Boolean;
 	username: string;
 	password: string;
 	resultado: string;
@@ -38,6 +39,7 @@ export class HeaderComponent implements OnInit {
 	out() { 
 		this.auth.logout();
     this.router.navigateByUrl('/home');
+		this.show = false;
 	}
 
 	uncheck(){

@@ -21,7 +21,13 @@
       <div class="spinner diagonal part-2"></div>
     </label>
 
-    <div class="collapse navbar-collapse" id="openSidebarMenu">
+    <div
+      [ngClass]="{
+        show: show
+      }"
+      class="navbar-collapse collapse"
+      id="openSidebarMenu"
+    >
       <ul
         class="navbar-nav mx-auto justify-content-center text-center"
         data-toggle="collapse"
@@ -63,7 +69,7 @@
             >CART <img src="/assets/images/cart.svg" class="img-fluid"
           /></a>
         </li>
-        <li>
+        <li class="nav-item">
           <button
             *ngIf="!auth.logged"
             class="btn btn-outline-primary my-2 my-sm-0 pl-4 pr-4 m-md-3 m-lg-5"
@@ -71,10 +77,12 @@
           >
             Log In
           </button>
+        </li>
+        <li class="nav-item">
           <button
             *ngIf="auth.logged"
             (click)="out()"
-            class="btn btn-outline-danger my-2 my-sm-0 pl-4 pr-4 m-md-3 m-lg-5"
+            class="nav-item btn btn-outline-danger my-2 my-sm-0 pl-4 pr-4 m-md-3 m-lg-5"
           >
             Log out
           </button>
