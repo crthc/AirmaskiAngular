@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~10.2.1",
     "@angular/router": "~10.2.1",
     "@asymmetrik/ngx-leaflet": "^8.1.0",
+    "@popperjs/core": "^2.6.0",
     "aos": "^2.3.4",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.3",

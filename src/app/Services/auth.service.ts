@@ -10,7 +10,7 @@ export class AuthService {
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
   private apikey = "AIzaSyBPSycQrbqbL-jeWFsWiE3bH0zZKaJNFKE";
 
-  logged:boolean;
+  logged:boolean = false;
   userToken: string;
 
   
@@ -29,7 +29,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
-    this.logged = false;
+    this.logged = !this.logged;
   }
 
   login(user: UserModel) {
@@ -42,7 +42,7 @@ export class AuthService {
       .pipe(
         map((resp) => {
           this.saveToken(resp['idToken']);
-          this.logged = true;
+          this.logged = !this.logged;
           return resp;
         })
       );

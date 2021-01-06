@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   //Lazy load images
-
   
 	//defaultWoman: string = '../../../assets/images/aboutusimg_rsz.jpg';
   woman: string = '../../../assets/images/AboutUsIMG.jpg';
